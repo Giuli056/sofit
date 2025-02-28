@@ -5,7 +5,10 @@ selector {
 }
 */
 
-
+.carousel-inner {
+   width: 400px;
+   height: 300px;
+}
 
 body {
    background-color: rgb(116, 116, 108);
@@ -18,18 +21,19 @@ body.centrar {
 
 .tituloPresentacion {
    color: rgb(255, 0, 200);
-  
-   }
-
-h1{ color: #c92088;
 
 }
 
-h2{
+h1 {
+   color: #c92088;
+
+}
+
+h2 {
    color: #e26ab4;
 }
 
-h3{
+h3 {
    color: #e280bd;
 }
 
@@ -37,7 +41,9 @@ h4 {
    color: #e280bd;
 }
 
-
+ul li {
+   display: inline;
+}
 
 
 
@@ -49,21 +55,21 @@ p {
 }
 
 header {
-z-index: 100;     
-position: sticky;
-top: 5px;
+   z-index: 100;
+   position: sticky;
+   top: 5px;
 }
 
-nav{
-background-color: #ddacca;
-display: block;
-width: 100%;
-margin-top: 0;
-margin-bottom: 1rem;
-padding: 0.5rem;
-border: 1px solid #ccc;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 16px;
+nav {
+   background-color: #ddacca;
+   display: block;
+   width: 100%;
+   margin-top: 0;
+   margin-bottom: 1rem;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 16px;
 }
 
 section {
@@ -83,10 +89,6 @@ li a {
    margin: 15px;
 }
 
-
-ul li.navegador{
-   display: inline;
-}
 
 ol {
    list-style-position: inside;
@@ -118,4 +120,45 @@ fieldset {
    position: fixed;
    bottom: 15px;
    right: 90px;
+}
+
+/* pantalla movil */
+@media screen and (max-width: 768px) {
+
+   body {
+      background-color: rgb(228, 226, 217);
+    max-width: 100%;
+     ;
+   }
+
+ ul li {
+   display: list-item;
+   display: flex; justify-content: center;
+ }
+
+   .contenedor {
+      max-width: 100%;
+      flex-direction: column;
+   }
+
+   .caja {
+      max-width: 100%;
+   }
+
+#carouselExampleIndicators {
+   display: flex; justify-content: center;
+   max-width: 100%;
+}
+
+.wp {
+   position: relative; 
+   bottom: 0;
+   right: 0;
+  
+}
+
+.navegador {
+   display: inline-block;
+}
+
 }
