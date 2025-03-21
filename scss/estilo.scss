@@ -1,0 +1,184 @@
+/*variables*/
+
+$fondo: #302e2fdc;
+
+/*mixin*/
+@mixin flexi ($direccion, $contenido, $item){
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $contenido;
+    align-items: $item;
+}
+
+
+
+body {
+    background-color: $fondo;
+    font-family: cursive;
+}
+
+body.centrar {
+    text-align: center;
+}
+
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 5px;
+}
+
+nav {
+display: block;
+padding: 0.5rem;
+font-size: 16px;
+    background-color: #ddacca;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+ul li {
+    justify-content: center;
+    display: inline;
+
+
+}
+
+/*anidacion*/
+ul {
+    list-style: none;
+
+    li a {
+        text-decoration: none;
+        font-size: 30px;
+        margin: 15px;
+    }
+}
+
+
+
+
+.carousel-inner {
+    width: 400px;
+    height: 300px;
+}
+
+.tituloPresentacion {
+    color: rgb(255, 0, 200);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #c92088;
+}
+
+h2 {
+    color: #e26ab4;
+}
+
+h3 {
+    color: #e280bd;
+}
+
+h4 {
+    color: #e280bd;
+}
+
+p {
+    color: #d89eb1;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+section {
+    border: 1px solid #a50b39;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+/*mixin*/
+.contenedor {
+    @include flexi(row, center ,center);
+   
+    padding: 40px;
+
+}
+
+.caja {
+    margin: 20px;
+}
+
+fieldset {
+    border-radius: 15px;
+}
+
+form {
+    color: #e26ab4;
+}
+
+.dejanosTusDatos {
+    font-size: 24px;
+}
+
+.wp {
+    position: fixed;
+    bottom: 15px;
+    right: 90px;
+}
+
+/* pantalla movil */
+@media screen and (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+
+    body {
+        background-color: rgb(228, 226, 217);
+        max-width: 100%;
+        ;
+    }
+
+    /*mixin*/
+    ul li {
+        @include flexi(row, center ,center);
+        display: list-item;
+    }
+
+    .contenedor {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .caja {
+        max-width: 100%;
+    }
+
+    /*mixin*/
+    #carouselExampleIndicators {
+        @include flexi(row, center ,center);
+        max-width: 100%;
+    }
+
+    .wp {
+        position: relative;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .navegador {
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "g": "^2.0.1",
+    "sass": "^1.85.1"
+  },
+  "name": "sofit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giuli056/sofit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giuli056/sofit/issues"
+  },
+  "homepage": "https://github.com/Giuli056/sofit#readme",
+  "description": ""
+}
